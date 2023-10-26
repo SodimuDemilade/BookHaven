@@ -15,6 +15,11 @@ BookHaven is a comprehensive platform for authors to showcase and sell their lit
 - Secure Data Handling and Privacy Compliance
 - Intuitive User Interface for a Seamless Experience
 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
 ## Getting Started
 
 To run this project locally, follow these steps:
@@ -36,23 +41,16 @@ BookHaven uses a bank API for secure payment processing. Make sure to set up you
 
 If you'd like to contribute to this project, please follow these steps:
 
-```bash
-# Fork the repository
-git clone https://github.com/your-username/BookHaven.git
-cd BookHaven
-
-# Create a new branch for your feature
-git checkout -b feature-name
-
-# Make your changes and commit them
-git add .
-git commit -m 'Add some feature'
-
-# Push to the branch
-git push origin feature-name
-
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+   ```bash
+   # Fork the repository
+   git clone https://github.com/your-username/BookHaven.git
+   cd BookHaven
+   
+   # Create a new branch for your feature
+   git checkout -b feature-name
+   # Make your changes and commit them
+   git add .
+   git commit -m 'Add some feature'
+   # Push to the branch
+   git push origin feature-name
 
