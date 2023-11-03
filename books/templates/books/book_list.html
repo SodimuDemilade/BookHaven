@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Books Available</title>
+</head>
+<body>
+    <h1>All Books Available!!!!</h1>
+    <ul>
+        {% for book in book_list %}
+            <li>{{ book.title }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
