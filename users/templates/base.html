@@ -196,10 +196,16 @@
             font-size: 14px;
         }
 
+        .alert {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
         main {
             background-position: center;
             background-size: cover;
             margin: 30px;
+            margin-bottom: 250px;
             height: 750px;
         }
         .menu-button {
@@ -245,8 +251,13 @@
                 <a href="{% url 'home-page' %}" class="nav-item">Home</a>
                 <a href="#" class="nav-item">Books</a>
                 <a href="#" class="nav-item">Purchase</a>
+                {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}" class="nav-item">Profile</a>
+                <a href="{% url 'logout' %}" class="nav-item">logout</a>
+                {% else %}
                 <a href="{% url 'login' %}" class="nav-item">Login</a>
-                <a href="{% url 'register' %}" class="nav-item"">Register</a>
+                <a href="{% url 'register' %}" class="nav-item">Register</a>
+                {% endif %}
             </div>
             <div class="navbar-right">
                 <input type="text" class="search-bar" placeholder="Search">
@@ -255,6 +266,11 @@
                 <i class="fas fa-bars"></i>
             </div>
         </nav>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
     </header>
     <main>
         {% block content %}
